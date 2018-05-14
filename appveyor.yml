@@ -1,9 +1,0 @@
-version: '{build}'
-configuration:
-  - Debug
-  - Release
-build_script:
-  - echo "Building for %CONFIGURATION%"
-  - dotnet msbuild build.proj /p:Configuration=%CONFIGURATION%
-test_script:
-  - ps: if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
